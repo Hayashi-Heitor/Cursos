@@ -1,0 +1,17 @@
+FROM openjdk
+
+COPY aula.txt /app/aula/aula.txt
+
+ADD aula.tar.gz /app/aula/
+
+RUN apt-get update
+
+CMD ["/app"]
+
+ENTRYPOINT ["ls"]
+
+ENV APLICACAO = aplicativo.js
+
+COPY $APLICACAO /app
+
+EXPOSE 9000
