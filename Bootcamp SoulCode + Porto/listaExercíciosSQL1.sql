@@ -24,7 +24,7 @@ CREATE TABLE if not EXISTS eventos(
   data_evento TEXT NOT NULL,
   cliente_id INTEGER NOT NULL,
   status TEXT DEFAULT 'Agendado',
-  FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+  FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE
 );
 
 -- Use "ALTER TABLE" para:
