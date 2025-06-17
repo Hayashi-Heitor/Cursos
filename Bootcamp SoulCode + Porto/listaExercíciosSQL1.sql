@@ -5,7 +5,7 @@
     -- data_cadastro (data e hora por padrão)
 
 CREATE TABLE if not EXISTS clientes(
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   nome TEXT UNIQUE NOT NULL,
   email TEXT UNIQUE NOT NULL,
   data_cadastro TEXT DEFAULT (DATETIME('now'))
@@ -19,7 +19,7 @@ CREATE TABLE if not EXISTS clientes(
     -- status (padrão 'Agendado')
 
 CREATE TABLE if not EXISTS eventos(
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   descricao TEXT NOT NULL,
   data_evento TEXT NOT NULL,
   cliente_id INTEGER NOT NULL,
