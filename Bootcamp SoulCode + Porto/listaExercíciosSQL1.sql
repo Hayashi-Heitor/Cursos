@@ -8,7 +8,7 @@ CREATE TABLE if not EXISTS clientes(
   id INTEGER PRIMARY KEY,
   nome TEXT UNIQUE NOT NULL,
   email TEXT UNIQUE NOT NULL,
-  data_cadastro TEXT DEFAULT '12/03/2006 12:00'
+  data_cadastro TEXT DEFAULT (DATETIME('now'))
 );
 
 -- 2. Crie a tabela "eventos"
